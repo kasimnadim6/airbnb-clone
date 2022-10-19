@@ -5,11 +5,9 @@ import {
   MagnifyingGlassIcon,
   UserCircleIcon,
 } from '@heroicons/react/20/solid';
-interface Props {
-  logoUrl: string;
-}
+import { HeaderProps } from '../interface/HeaderProps';
 
-const Header = ({ logoUrl }: Props) => {
+const Header = ({ logoUrl }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-3 md:p-5 md:px-10">
       <div className="relative h-7 md:h-10 flex items-center cursor-pointer my-auto">
