@@ -1,3 +1,5 @@
 export interface HeaderProps {
-  logoUrl: string;
+  logoUrl?: string;
+  name?: string;
+  placeHolder?: string;
 }
