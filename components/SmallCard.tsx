@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import { CardProps } from '../interface/CardProps';
 
 export const SmallCard = ({ data }: CardProps) => {
@@ -9,7 +8,7 @@ export const SmallCard = ({ data }: CardProps) => {
         <Image src={data?.img || ''} layout="fill" className="rounded-lg" />
       </div>
       <div>
-        <h2>{data?.location}</h2>
+        <h2 className="text-lg">{data?.location}</h2>
         <h3 className="text-gray-500">{data?.distance}</h3>
       </div>
     </div>

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .button {
+    @apply lg:text-lg font-semibold px-4 py-2 mb-3 border rounded-full cursor-pointer hover:shadow-md active:bg-gray-100 active:scale-95 transition-all duration-100 ease-in-out;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
