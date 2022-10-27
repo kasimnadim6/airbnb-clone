@@ -46,7 +46,7 @@ const Search: NextPage = ({
               ))}
           </div>
         </section>
-        <section className="lg:min-w-[600px]">
+        <section className="map-container lg:min-w-[600px]">
           <Map data={searchData} />
         </section>
       </div>
