@@ -13,3 +13,9 @@ html {
   font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+@media (max-width: 480px) {
+  .date-picker .rdrDefinedRangesWrapper,
+  .date-picker .rdrDateRangeWrapper {
+    font-size: 0.9rem !important;
+  }
+}

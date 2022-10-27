@@ -82,8 +82,9 @@ const Header = ({ logoUrl, placeHolder }: HeaderProps) => {
         </div>
       </div>
       {searchVal && (
-        <div className="flex flex-col col-span-4 md:col-span-3 mx-auto">
+        <div className="flex flex-col col-span-4 md:col-span-3 md:mx-auto">
           <DateRangePicker
+            className="date-picker"
             ranges={[selectionRange]}
             minDate={new Date()}
             rangeColors={['#FD5B61']}
