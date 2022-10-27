@@ -3,6 +3,7 @@ import { getImageUrl } from '../utils/db';
 import { format } from 'date-fns';
 import Header from '../components/Header';
 import Stay from '../components/Stay';
+import Map from '../components/Map';
 
 const Search: NextPage = ({
   logoUrl,
@@ -23,27 +24,32 @@ const Search: NextPage = ({
         logoUrl={logoUrl}
         placeHolder={`${location} | ${range} | ${numberOfGuest} guests`}
       />
-      <section className="flex flex-col mt-14 px-6">
-        <p className="text-lg md:text-xl">
-          300+ Stays - {range} - for {numberOfGuest} guests
-        </p>
-        <h1 className="text-4xl md:text-5xl font-semibold mb-6 mt-2">
-          Stays in {location}
-        </h1>
-        <div className="hidden lg:inline-flex space-x-3 text-gray-800 mb-5 whitespace-nowrap">
-          <p className="button">Cancellation Flexibility</p>
-          <p className="button">Type of Places</p>
-          <p className="button">Price</p>
-          <p className="button">Rooms and Beds</p>
-          <p className="button">More filters</p>
-        </div>
-        <div className="flex flex-col">
-          {searchData &&
-            searchData.map((item: any) => (
-              <Stay key={item.title} data={item} />
-            ))}
-        </div>
-      </section>
+      <div className="flex flex-col lg:flex-row justify-between gap-10">
+        <section className="flex flex-col mt-14 px-6 flex-grow">
+          <p className="text-lg md:text-xl">
+            300+ Stays - {range} - for {numberOfGuest} guests
+          </p>
+          <h1 className="text-4xl md:text-5xl font-semibold mb-6 mt-2">
+            Stays in {location}
+          </h1>
+          <div className="hidden lg:inline-flex space-x-3 text-gray-800 mb-5 whitespace-nowrap">
+            <p className="button">Cancellation Flexibility</p>
+            <p className="button">Type of Places</p>
+            <p className="button">Price</p>
+            <p className="button">Rooms and Beds</p>
+            <p className="button">More filters</p>
+          </div>
+          <div className="flex flex-col">
+            {searchData &&
+              searchData.map((item: any) => (
+                <Stay key={item.title} data={item} />
+              ))}
+          </div>
+        </section>
+        <section className="lg:min-w-[600px]">
+          <Map data={searchData} />
+        </section>
+      </div>
     </>
   );
 };

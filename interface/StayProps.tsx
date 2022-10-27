@@ -6,8 +6,8 @@ export interface Stay {
   star: string;
   price: string;
   total: string;
-  long: string;
-  lat: string;
+  long: number;
+  lat: number;
 }
 export interface StayProps {
   data: Stay;
